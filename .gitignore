@@ -1,33 +1,40 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# Dependencies
+# dependencies
 /node_modules
-/.pnp
-.pnp.js
 
-# Testing
-/coverage
+# lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
 
-# Vite
+# build output
+/dist
 .vite/
-dist/
 
-# Local-specific
+# config files not needed in production
+components.json
+eslint.config.js
+postcss.config.js
+tailwind.config.ts
+tsconfig.app.json
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
+
+# misc
+.DS_Store
 .env.local
 .env.*.local
-
-# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Editor directories and files
+# editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
