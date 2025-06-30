@@ -11,6 +11,22 @@ export const Navbar = () => {
   };
 
   const navItems = [
+      {
+      label: 'Accelerator Programs',
+      items: [
+        { name: 'Why Join Base Camp', description: '' },
+        { name: 'Base Camp Accelerator', description: '' },
+        { name: 'Ascent Token Launch', description: '' }
+      ]
+    },
+    
+    {
+      label: 'Partners',
+      items: [
+        { name: 'Partner Program', description: 'Join our network' },
+        { name: 'API Integration', description: 'Build with our platform' }
+      ]
+    },
     {
       label: 'Investors',
       items: [
@@ -28,21 +44,7 @@ export const Navbar = () => {
         { name: 'Sharedrops', description: 'Gift equity as a reward' }
       ]
     },
-    {
-      label: 'Accelerator Programs',
-      items: [
-        { name: 'Why Join Base Camp', description: '' },
-        { name: 'Base Camp Accelerator', description: '' },
-        { name: 'Ascent Token Launch', description: '' }
-      ]
-    },
-    {
-      label: 'Partners',
-      items: [
-        { name: 'Partner Program', description: 'Join our network' },
-        { name: 'API Integration', description: 'Build with our platform' }
-      ]
-    }
+  
   ];
 
   return (
