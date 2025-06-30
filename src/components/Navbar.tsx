@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
@@ -29,6 +28,7 @@ export const Navbar = () => {
     },
     {
       label: 'Investors',
+      comingSoon: true,
       items: [
         { name: 'Live deals', description: 'Primary market' },
         { name: 'Buy and sell', description: 'Secondary market' },
@@ -38,6 +38,7 @@ export const Navbar = () => {
     },
     {
       label: 'Businesses',
+      comingSoon: true,
       items: [
         { name: 'Capital fundraising', description: 'Raise on Republic' },
         { name: 'Tokenized assets', description: 'Design, launch, manage tokenized assets' },
@@ -70,6 +71,11 @@ export const Navbar = () => {
                     onClick={() => toggleDropdown(item.label)}
                   >
                     {item.label}
+                    {item.comingSoon && (
+                      <span className="ml-2 text-xs bg-purple-500/30 text-purple-300 px-2 py-0.5 rounded-full">
+                        Coming Soon
+                      </span>
+                    )}
                     <ChevronDown className="ml-1 w-4 h-4" />
                   </button>
                   
@@ -123,10 +129,15 @@ export const Navbar = () => {
               {navItems.map((item) => (
                 <div key={item.label}>
                   <button
-                    className="text-gray-300 hover:text-cyan-400 block px-3 py-2 text-base font-medium w-full text-left"
+                    className="text-gray-300 hover:text-cyan-400 block px-3 py-2 text-base font-medium w-full text-left flex items-center"
                     onClick={() => toggleDropdown(item.label)}
                   >
                     {item.label}
+                    {item.comingSoon && (
+                      <span className="ml-2 text-xs bg-purple-500/30 text-purple-300 px-2 py-0.5 rounded-full">
+                        Coming Soon
+                      </span>
+                    )}
                   </button>
                   {activeDropdown === item.label && (
                     <div className="pl-6 space-y-1">
